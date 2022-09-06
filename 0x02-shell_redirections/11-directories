@@ -1,2 +1,2 @@
 #!/bin/bash
-find -minddepth 1 -typy d | wc -i
+find -minddepth 1 -typy d | wc -l
