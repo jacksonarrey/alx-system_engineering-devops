@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# copying from one file to the other
+cp -r /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
