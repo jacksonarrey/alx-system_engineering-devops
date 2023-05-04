@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #  Configures an Nginx server to listen on port 80.
-
-cp -r /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
+rm /etc/nginx/sites-enabled/default
+# what is keeping you ubuntu containers nginx installation from listening on port 80
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
