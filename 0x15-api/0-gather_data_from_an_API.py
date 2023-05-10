@@ -5,9 +5,13 @@ import sys
 
 if __name__ =="__main":
         url = "https://jsonplaceholder.typicode.com/"
-        user = requests.get(url +"users/{}".format(sys.argv[1])).json()
-        todos = requests.get(url + "todos", params={"userId": sys.argv[1]}).json()
-
-        completee = [t.get("tittle") for t in todos if t.get ("completed") is TRUE          print (Employee {} is done with tasks({}/{}):".format(
-            user.get("name"), len(completed), len(todos)))
-        [print"\t {}".format(c)) for c in completed] 
+        user_id = sys.arg[1]
+        user_endp = "{}/users/{}".format(url, user_id)
+        name =requests.get(user_endp).json().get("name")
+        tasks_endp = "{}/todos".format(url
+        tasks = requests.get(tasks_endp).json()
+        tasks_user = [dict for dict in tasks if dict.get("userid") == user_id]
+        tasks_completed = [dict for dict in tasks_user if dict.get("completed") == True
+        
+                print("Employee {} is done with tasks({}/{})":
+            .format(name, len(tasks_completed), len(tasks_user)))
