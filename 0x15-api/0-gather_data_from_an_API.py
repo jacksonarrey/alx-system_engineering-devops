@@ -10,7 +10,7 @@ if __name__ =="__main":
         name =requests.get(user_endp).json().get("name")
         tasks_endp = "{}/todos".format(url
         tasks = requests.get(tasks_endp).json()
-        tasks_user = [dict for dict in tasks if dict.get("userid") == user_id]
+        tasks_user = [task for task in tasks if task.get("userid") == user_id]
         tasks_completed = [dict for dict in tasks_user if dict.get("completed") == True
         
                 print("Employee {} is done with tasks({}/{})":
