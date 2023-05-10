@@ -11,7 +11,9 @@ if __name__ =="__main":
         tasks_endp = "{}/todos".format(url
         tasks = requests.get(tasks_endp).json()
         tasks_user = [task for task in tasks if task.get("userid") == user_id]
-        tasks_completed = [dict for dict in tasks_user if dict.get("completed") == True
+        completed_task = [dict for dict in tasks_user if dict.get("completed") == True
         
                 print("Employee {} is done with tasks({}/{})":
             .format(name, len(tasks_completed), len(tasks_user)))
+                for task in completed_task:       
+                    print ("\t {}".format(task.get("TITLE")))
