@@ -5,7 +5,7 @@ import sys
 
 if __name__ =="__main":
         url = "https://jsonplaceholder.typicode.com/"
-        user_id = sys.arg[1]
+        user_id = int (sys.arg[1]) 
         user_endp = "{}/users/{}".format(url, user_id)
         name =requests.get(user_endp).json().get("name")
         tasks_endp = "{}/todos".format(url
