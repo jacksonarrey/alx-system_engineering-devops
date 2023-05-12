@@ -15,7 +15,7 @@ ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
 
 # Redirecting
-string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com/EmyCodes?tab=repositories;\n"
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com/jacksonarrey?tab=repositories;\n"
 sudo sed -i "s#server_name _;#$string_for_replacement#g" /etc/nginx/sites-enabled/default
 
 # code for error page and redirect error 404
